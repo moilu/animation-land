@@ -170,13 +170,8 @@
 			margin: 0 auto;
 			position: absolute;
 			top: 30px;
-			width: 100%;
-		}
-        @keyframes blink {
-            0% {
-                
-            }
-        }
+			width: 100%; 
+		} 
 		.head__eye {
 			background: black;
 			border-radius: 50%;
@@ -184,7 +179,24 @@
 			height: 4px;
 			position: absolute;
 			top: 15px;
+
+            animation-name: blink;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
 		}
+        @keyframes blink {
+            0% {
+                height: 4px;
+            }
+            5% {
+                transform: translate(0px, 2px);
+                height: 1px;
+            }
+            10% {
+                transform: translate(0px, 0px);
+                height: 4px;
+            }
+        }
 		.head__eye--left {
 			left: 30px;
 		}
